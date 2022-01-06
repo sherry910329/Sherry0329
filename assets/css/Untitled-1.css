@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  
+  }
+  .cards {
+    padding:50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    max-width: 900px;
+    grid-gap: 10px;
+    margin: 0 auto;
+  
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow:1px 1px 4px 1px rgb(193, 193, 193);
+  }
+  .card .head {
+    display: flex;
+  
+    padding: 15px;
+    border-bottom: 2px solid #efefef;
+  }
+  .card .image {
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    overflow:hidden;
+    height: 250px;
+  }
+  .card .details {
+    position:relative;
+  }
+  
+  .card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+  }
+  .card .details {
+    border-top: 2px solid #efefef;
+    padding: 10px 20px;
+    display: flex;
+  }
+  .card .details .name {
+    font-size: 1.1rem;
+  }
+  .card .details .description {
+    font-size: 0.8rem;
+    color: grey;
+  }
+  .card .details .price {
+    font-size: 0.9rem;
+    color: green;
+    margin: 0  auto;
+  }
+  .card .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #e7b1b1;
+    z-index:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display:none;
+  }
+  .card .overlay .item {
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color:white; 
+    border: 1px solid white;
+    margin: 10px;
+  }
+  
+  .card:hover .overlay { 
+    display: flex;
+    animation: 0.5s visible;
+  }
+  
+  @keyframes visible {
+    0%{
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
